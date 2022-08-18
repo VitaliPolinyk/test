@@ -1,0 +1,21 @@
+<h3>Last Changes:</h3>
+<table id="customers">
+  <thead>
+  <tr>
+    <th>Currency From</th>
+    <th>Currency To</th>
+    <th>Amount</th>
+    <th>Result</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of history | slice:0:10">
+    <td>{{item.from.txt}}</td>
+    <td>{{item.to.txt}}</td>
+    <td>{{item.amount | currency : ' '}}</td>
+    <td>{{item.result | currency : ' '}}</td>
+    <td>{{item.time | date}}</td>
+  </tr>
+  </tbody>
+</table>
